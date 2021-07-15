@@ -1,0 +1,35 @@
+{
+  "name": "movies-explorer-api",
+  "version": "1.0.0",
+  "description": "Diploma Ya.Praktikum",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesMickey/movies-explorer-api.git"
+  },
+  "author": "Arthur Chukhnenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesMickey/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/CharlesMickey/movies-explorer-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "celebrate": "^15.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.1",
+    "mongoose": "^5.13.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.12"
+  }
+}
