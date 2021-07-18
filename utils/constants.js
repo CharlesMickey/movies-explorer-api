@@ -4,7 +4,7 @@ const USER_SCHEMA_MSG = {
     FILLING_ERROR: 'Поле "email" - обязательно для заполнения',
     ERROR_MSG: 'Неправильный формат почты',
   },
-  PASSWORD: 'Поле "password" - обязательно для заполнения',
+  PASSWORD: 'Поле "password" - обязательно для заполнения - минимум 8 знаков',
 };
 
 const MOVIE_SCHEMA_MSG = {
@@ -26,4 +26,26 @@ const MOVIE_SCHEMA_MSG = {
   ERROR_URL: 'Неправильный формат URL-ссылки',
 };
 
-module.exports = { USER_SCHEMA_MSG, MOVIE_SCHEMA_MSG };
+const ERROR_MSG = {
+  CRASH_TEST: 'Сервер сейчас упадет',
+  SERVER_500: 'На сервере произошла ошибка',
+  PATH_NOT_FOUND: 'Вы пытаетесь перейти по несуществующему пути',
+  CONFLICT_EMAIL: 'Используйте другой email',
+  BAD_REQUEST: {
+    PROFILE_UPD: 'Переданы некорректные данные при обновлении профиля',
+    CREATE_USER: 'Переданы некорректные данные при создании пользователя',
+  },
+  UNAUTHORIZED: 'Неправильные почта или пароль.',
+};
+
+const MSG = {
+  LOGGED_IN: 'Вы успешно авторизованны!',
+  LOGGED_OUT: 'Вы успешно деавторизованны!',
+};
+
+module.exports = {
+  USER_SCHEMA_MSG,
+  MOVIE_SCHEMA_MSG,
+  ERROR_MSG,
+  MSG,
+};
