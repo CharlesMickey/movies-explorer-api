@@ -37,10 +37,8 @@ module.exports.createUser = (req, res, next) => {
   const { name, email, password } = req.body;
   bcrypt
     .hash(password, 10)
-    .then((hash) => {
-      User.create({ name, email, password: hash })
-        .then((user) => res.send({ name, email, _id: user._id }));
-    })
+    .then((hash) => User.create({ name, email, password: hash }))
+    .then((user) => res.send({ name, email, _id: user._id }))
     .catch((err) => {
       if (err.name === 'MongoError' && err.code === 11000) {
         next(new Conflict(ERROR_MSG.CONFLICT_EMAIL));

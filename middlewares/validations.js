@@ -20,6 +20,8 @@ const validateUserPatchBody = celebrate({
       })
       .messages({
         'string.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
+        'any.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
+        'string.base': USER_SCHEMA_MSG.EMAIL.ERROR_MSG,
       }),
   }),
 });
@@ -42,6 +44,8 @@ const validateUserCreateBody = celebrate({
       })
       .messages({
         'string.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
+        'any.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
+        'string.base': USER_SCHEMA_MSG.EMAIL.ERROR_MSG,
       }),
     password: Joi.string().required().min(8)
       .messages({
@@ -63,6 +67,7 @@ const validateUserAuthorization = celebrate({
       })
       .messages({
         'string.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
+        'any.required': USER_SCHEMA_MSG.EMAIL.FILLING_ERROR,
       }),
     password: Joi.string().required().min(8)
       .messages({
