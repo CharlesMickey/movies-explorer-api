@@ -4,6 +4,6 @@ const { getUserInfo, updateProfile, signOut } = require('../controllers/user');
 
 router.get('/me', getUserInfo);
 router.patch('/me', validateUserPatchBody, updateProfile);
-router.delete('/signout', signOut);
+router.post('/signout', signOut);
 
 module.exports = router;
