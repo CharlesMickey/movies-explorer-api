@@ -149,9 +149,13 @@ const validateCreateMovieBody = celebrate({
 
 const validateDeleteMovieParams = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.number().required()
+    movieId: Joi.string().required().hex().length(24)
       .messages({
-        'number.required': MOVIE_SCHEMA_MSG.MOVIE_ID,
+        'string.base': MOVIE_SCHEMA_MSG.MOVIE_ID,
+        'string.length': MOVIE_SCHEMA_MSG.MOVIE_ID,
+        'string.empty': MOVIE_SCHEMA_MSG.MOVIE_ID,
+        'any.required': MOVIE_SCHEMA_MSG.MOVIE_ID,
+        'string.hex': MOVIE_SCHEMA_MSG.MOVIE_ID,
       }),
   }),
 });
